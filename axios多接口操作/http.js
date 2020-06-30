@@ -15,7 +15,7 @@ const Tip = msg => {
 var serve = axios.create({timeout: 1000*12});
 
 // post响应头
-serve.defaults.headers.post['Content-Type']='application/json;charset=UTF-8';
+serve.defaults.headers.post['Content-Type']='application/x-www-form-urlencoded';
 
 // 请求拦截
 serve.interceptors.request.use(

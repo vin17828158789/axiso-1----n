@@ -1,5 +1,5 @@
 // import axios from 'axios'
-// import qs from 'qs'
+import qs from 'qs'
 import http from './http'
 import base from './baseURL'
 
@@ -9,12 +9,12 @@ import base from './baseURL'
 // 登录
 function start_login(obj){
     return http.post(`${base.baseURL_8080}/apigateway/osauthen/login`,
-        obj)
+        qs.stringify(obj))
 }
 // 登出
 function logout(obj){
     return http.post(`${base.baseURL_8080}/apigateway/osauthen/logout`,
-        obj)
+        qs.stringify(obj))
 }
 // 暴露接口
 export default {
